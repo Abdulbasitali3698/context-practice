@@ -17,7 +17,7 @@ export default function Header() {
             icon={<FaCartArrowDown />}
             aria-label='Shopping Cart'
             bg="none" />
-          <Text marginLeft="2" fontSize="lg">{products.reduce((total, product )=> total + product.quantity,0)}</Text> {/* Display the item count */}
+          <Text marginLeft="2" fontSize="lg">{products.length}</Text> {/* Display the item count */}
         </Link>
       </Flex>
     </Box>

@@ -1,6 +1,6 @@
 
 "use client";
-import React, { createContext, useContext, useState, ReactNode } from 'react';
+import React, { createContext, useContext, useState, ReactNode, useEffect } from 'react';
 
 interface product {
   id:number;
@@ -32,6 +32,10 @@ interface CartProviderProps {
 
 export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
   const[products,setProducts]=useState<product[]>([]);
+
+  useEffect(() => {
+    console.log(products)
+  },[])
 
 
   const addToCart = (productId:number,productName:string)=>{
